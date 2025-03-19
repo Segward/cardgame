@@ -1,0 +1,5 @@
+edu/ntnu/idat2003/models/DeckOfCards.class
+edu/ntnu/idat2003/App.class
+edu/ntnu/idat2003/graphics/Engine.class
+edu/ntnu/idat2003/views/UserInterface.class
+edu/ntnu/idat2003/models/PlayingCard.class

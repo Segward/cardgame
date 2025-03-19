@@ -1,0 +1,24 @@
+#dealer-section {
+    -fx-background-image: url("images/dealer.jpg");
+    -fx-background-color: #333333;
+    -fx-background-repeat: no-repeat;   
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+}
+
+#normal-section {
+    -fx-background-color: #333333;
+    -fx-alignment: center;
+}
+
+#flow-pane {
+    -fx-alignment: center;
+    -fx-hgap: 10px;
+}
+
+#output-label {
+    -fx-font-size: 40px;
+    -fx-fill: white;
+}
