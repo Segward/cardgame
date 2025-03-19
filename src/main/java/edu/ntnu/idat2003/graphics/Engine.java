@@ -32,23 +32,31 @@ public class Engine {
     dealerHand.forEach(card -> dealerFlow.getChildren().add(createCard(card)));
   }
 
-  public void checkSum(Text outputLabel) {
+  public void checkHand(FlowPane labelFlow) {
+    // Check if the dealer has a flush, queen of clubs, and hearts
     int sum = DeckOfCards.getSumOfFaces(dealerHand);
-    outputLabel.setText("Sum: " + sum);
-  }
-
-  public void checkFlush(Text outputLabel) {
     boolean flush = DeckOfCards.hasFlush(dealerHand);
-    outputLabel.setText("Flush: " + flush);
-  }
-
-  public void checkQueen(Text outputLabel) {
     boolean queen = DeckOfCards.hasQueenOfClubs(dealerHand);
-    outputLabel.setText("Queen of clubs: " + queen);
-  }
-
-  public void checkHearts(Text outputLabel) {
     HashSet<String> hearts = DeckOfCards.getHearts(dealerHand);
-    outputLabel.setText("Hearts: " + hearts);
+
+    // Create text labels
+    Text sumText = new Text("Sum: " + sum);
+    Text flushText = new Text("Flush: " + flush);
+    Text queenText = new Text("Queen of Clubs: " + queen);
+    Text heartsText = new Text("Hearts: " + hearts);
+
+    if (hearts.isEmpty()) {
+      heartsText.setText("Hearts: None");
+    }
+
+    // Add identifiers to the text labels
+    sumText.setId("output-label");
+    flushText.setId("output-label");
+    queenText.setId("output-label");
+    heartsText.setId("output-label");
+
+    // Add the text labels to the FlowPane
+    labelFlow.getChildren().clear();
+    labelFlow.getChildren().addAll(sumText, flushText, queenText, heartsText);
   }
 }

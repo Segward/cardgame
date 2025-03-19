@@ -13,12 +13,18 @@
     -fx-alignment: center;
 }
 
-#flow-pane {
+#horizontal-pane {
     -fx-alignment: center;
     -fx-hgap: 10px;
 }
 
+#vertical-pane {
+    -fx-alignment: center;
+    -fx-hgap: 10px;
+    -fx-orientation: vertical;
+}
+
 #output-label {
-    -fx-font-size: 40px;
+    -fx-font-size: 30px;
     -fx-fill: white;
 }

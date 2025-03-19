@@ -52,13 +52,13 @@ public class UserInterface {
     StackPane dealerSection = new StackPane();
     dealerSection.setId("dealer-section");
     dealerSection.prefWidthProperty().bind(vBox.widthProperty());
-    dealerSection.prefHeightProperty().bind(vBox.heightProperty().multiply(0.6));
+    dealerSection.prefHeightProperty().bind(vBox.heightProperty().multiply(0.5));
 
     // Create a label section
     StackPane labelSection = new StackPane();
     labelSection.setId("normal-section");
     labelSection.prefWidthProperty().bind(vBox.widthProperty());
-    labelSection.prefHeightProperty().bind(vBox.heightProperty().multiply(0.2));
+    labelSection.prefHeightProperty().bind(vBox.heightProperty().multiply(0.3));
 
     // Create the button section
     StackPane buttonSection = new StackPane();
@@ -71,46 +71,29 @@ public class UserInterface {
 
     // Create a flow layout for the dealer section
     FlowPane dealerFlow = new FlowPane();
-    dealerFlow.setId("flow-pane");
+    dealerFlow.setId("horizontal-pane");
 
     // Create a flow layout for label output
     FlowPane labelFlow = new FlowPane();
-    labelFlow.setId("flow-pane");
-
-    // Create a label for the output
-    Text outputLabel = new Text("Welcome to the card game!");
-    outputLabel.setId("output-label");
-    labelFlow.getChildren().add(outputLabel);
+    labelFlow.setId("vertical-pane");
 
     // Create a flow layout for the buttons
     FlowPane buttonFlow = new FlowPane();
-    buttonFlow.setId("flow-pane");
+    buttonFlow.setId("horizontal-pane");
 
     // Create the buttons
     Button dealButton = new Button("Deal");
     dealButton.setPrefSize(100, 50);
     dealButton.setOnAction(event -> engine.dealHands(dealerFlow));
 
-    Button checkSumButton = new Button("Check sum");
-    checkSumButton.setPrefSize(100, 50);
-    checkSumButton.setOnAction(event -> engine.checkSum(outputLabel));
-
-    Button checkQueenButton = new Button("Check queen");
-    checkQueenButton.setPrefSize(100, 50);
-    checkQueenButton.setOnAction(event -> engine.checkQueen(outputLabel));
-
-    Button checkFlushButton = new Button("Check flush");
-    checkFlushButton.setPrefSize(100, 50);
-    checkFlushButton.setOnAction(event -> engine.checkFlush(outputLabel));
-
-    Button checkHeartsButton = new Button("Check hearts");
-    checkHeartsButton.setPrefSize(100, 50);
-    checkHeartsButton.setOnAction(event -> engine.checkHearts(outputLabel));
+    Button checkHand = new Button("Check Hand");
+    checkHand.setPrefSize(100, 50);
+    checkHand.setOnAction(event -> engine.checkHand(labelFlow));
 
     // Add the buttons to the flow layout
     buttonFlow
         .getChildren()
-        .addAll(dealButton, checkSumButton, checkQueenButton, checkFlushButton, checkHeartsButton);
+        .addAll(dealButton, checkHand);
 
     // Add the flow layouts to the sections
     dealerSection.getChildren().add(dealerFlow);
