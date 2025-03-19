@@ -8,15 +8,11 @@ public class DeckOfCards {
 
   public static HashSet<PlayingCard> dealHand(int numberOfCards) {
     HashSet<PlayingCard> hand = new HashSet<>();
-    for (int i = 0; i < numberOfCards; i++) {
+    while(hand.size() < numberOfCards) {
       int suitIndex = (int) (Math.random() * 4);
       int face = (int) (Math.random() * 13) + 1;
       PlayingCard card = new PlayingCard(suits[suitIndex], face);
-      if (hand.contains(card)) {
-        i--;
-        continue;
-      }
-      hand.add(card);
+      hand.add(card); // Only unique cards are added
     }
     return hand;
   }
