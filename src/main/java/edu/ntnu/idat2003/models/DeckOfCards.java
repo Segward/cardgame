@@ -29,8 +29,8 @@ public class DeckOfCards {
     return hand.stream().mapToInt(PlayingCard::getFace).sum();
   }
 
-  public static boolean hasQueenOfClubs(HashSet<PlayingCard> hand) {
-    return hand.contains(new PlayingCard('C', 12));
+  public static boolean hasQueenOfSpades(HashSet<PlayingCard> hand) {
+    return hand.contains(new PlayingCard('S', 12));
   }
 
   public static boolean hasFlush(HashSet<PlayingCard> hand) {

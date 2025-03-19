@@ -36,13 +36,13 @@ public class Engine {
     // Check if the dealer has a flush, queen of clubs, and hearts
     int sum = DeckOfCards.getSumOfFaces(dealerHand);
     boolean flush = DeckOfCards.hasFlush(dealerHand);
-    boolean queen = DeckOfCards.hasQueenOfClubs(dealerHand);
+    boolean queen = DeckOfCards.hasQueenOfSpades(dealerHand);
     HashSet<String> hearts = DeckOfCards.getHearts(dealerHand);
 
     // Create text labels
     Text sumText = new Text("Sum: " + sum);
     Text flushText = new Text("Flush: " + flush);
-    Text queenText = new Text("Queen of Clubs: " + queen);
+    Text queenText = new Text("Queen of Spades: " + queen);
     Text heartsText = new Text("Hearts: " + hearts);
 
     if (hearts.isEmpty()) {
