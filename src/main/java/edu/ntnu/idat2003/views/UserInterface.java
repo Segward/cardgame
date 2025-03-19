@@ -86,14 +86,18 @@ public class UserInterface {
     dealButton.setPrefSize(100, 50);
     dealButton.setOnAction(event -> engine.dealHands(dealerFlow));
 
-    Button checkHand = new Button("Check Hand");
-    checkHand.setPrefSize(100, 50);
-    checkHand.setOnAction(event -> engine.checkHand(labelFlow));
+    Button checkHandButton = new Button("Check Hand");
+    checkHandButton.setPrefSize(100, 50);
+    checkHandButton.setOnAction(event -> engine.checkHand(labelFlow));
+
+    Button rollUntilFlushButton = new Button("Roll until flush");
+    rollUntilFlushButton.setPrefSize(100, 50);
+    rollUntilFlushButton.setOnAction(event -> engine.rollUntilFlush(dealerFlow, labelFlow));
 
     // Add the buttons to the flow layout
     buttonFlow
         .getChildren()
-        .addAll(dealButton, checkHand);
+        .addAll(dealButton, checkHandButton, rollUntilFlushButton);
 
     // Add the flow layouts to the sections
     dealerSection.getChildren().add(dealerFlow);
