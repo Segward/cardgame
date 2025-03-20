@@ -7,7 +7,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class UserInterface {
@@ -95,9 +94,7 @@ public class UserInterface {
     rollUntilFlushButton.setOnAction(event -> engine.rollUntilFlush(dealerFlow, labelFlow));
 
     // Add the buttons to the flow layout
-    buttonFlow
-        .getChildren()
-        .addAll(dealButton, checkHandButton, rollUntilFlushButton);
+    buttonFlow.getChildren().addAll(dealButton, checkHandButton, rollUntilFlushButton);
 
     // Add the flow layouts to the sections
     dealerSection.getChildren().add(dealerFlow);

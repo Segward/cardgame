@@ -80,12 +80,10 @@ public class Engine {
     ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
     // Deal the dealer hand if it is not already dealt
-    if (dealerHand == null) {
-      dealHands(dealerFlow);
-    }
+    dealHands(dealerFlow);
 
     // Schedule the dealAndCheck method to run every 10 milliseconds
     executor.scheduleAtFixedRate(
-        () -> dealAndCheck(executor, dealerFlow, labelFlow), 0, 10, TimeUnit.MILLISECONDS);
+        () -> dealAndCheck(executor, dealerFlow, labelFlow), 0, 5, TimeUnit.MILLISECONDS);
   }
 }

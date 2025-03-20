@@ -1,30 +1,30 @@
 #dealer-section {
-    -fx-background-image: url("images/dealer.jpg");
-    -fx-background-color: #333333;
-    -fx-background-repeat: no-repeat;   
-    -fx-background-size: contain;
-    -fx-background-position: center center;
-    -fx-pref-width: 100%;
-    -fx-pref-height: 100%;
+  -fx-background-image: url("images/dealer.jpg");
+  -fx-background-color: #333333;
+  -fx-background-repeat: no-repeat;
+  -fx-background-size: contain;
+  -fx-background-position: center center;
+  -fx-pref-width: 100%;
+  -fx-pref-height: 100%;
 }
 
 #normal-section {
-    -fx-background-color: #333333;
-    -fx-alignment: center;
+  -fx-background-color: #333333;
+  -fx-alignment: center;
 }
 
 #horizontal-pane {
-    -fx-alignment: center;
-    -fx-hgap: 10px;
+  -fx-alignment: center;
+  -fx-hgap: 10px;
 }
 
 #vertical-pane {
-    -fx-alignment: center;
-    -fx-hgap: 10px;
-    -fx-orientation: vertical;
+  -fx-alignment: center;
+  -fx-hgap: 10px;
+  -fx-orientation: vertical;
 }
 
 #output-label {
-    -fx-font-size: 30px;
-    -fx-fill: white;
+  -fx-font-size: 30px;
+  -fx-fill: white;
 }
